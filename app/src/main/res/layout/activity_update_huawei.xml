@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/huawei_light_bg">
+
+    <!-- Center content group -->
+    <LinearLayout
+        android:id="@+id/center_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/text_version_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- EMUI Title -->
+        <TextView
+            android:id="@+id/text_update_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/huawei_emui_title"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <!-- System Update Subtitle -->
+        <TextView
+            android:id="@+id/text_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/huawei_system_update_subtitle"
+            android:textColor="#FF999999"
+            android:textSize="14sp" />
+
+        <!-- Progress Ring Container -->
+        <FrameLayout
+            android:id="@+id/ring_container"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="32dp">
+
+            <ProgressBar
+                android:id="@+id/progress_update"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_gravity="center"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/progress_ring_huawei" />
+
+            <!-- Percentage inside the ring -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="56sp" />
+
+                <TextView
+                    android:id="@+id/text_percent_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:alpha="0.5"
+                    android:text="%"
+                    android:textColor="@color/black"
+                    android:textSize="32sp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- Updating... text (pulses in code) -->
+        <TextView
+            android:id="@+id/text_update_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/huawei_updating"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <!-- Optimizing system performance description -->
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:maxWidth="280dp"
+            android:text="@string/huawei_installing"
+            android:textColor="#FF999999"
+            android:textSize="14sp" />
+
+        <!-- Do not restart your phone (RED) -->
+        <TextView
+            android:id="@+id/text_do_not_turn_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/huawei_do_not_turn_off"
+            android:textColor="@color/huawei_warning_red"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- Footer version info -->
+    <TextView
+        android:id="@+id/text_version_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/huawei_version_info"
+        android:textColor="#FF999999"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

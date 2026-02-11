@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- App palette (Stitch design) -->
+    <color name="charcoal_dark">#FF0F2023</color>
+    <color name="charcoal_surface">#FF162A2E</color>
+    <color name="card_dark">#FF23233C</color>
+    <color name="summary_bg">#FF252540</color>
+    <color name="electric_blue">#FF00D4FF</color>
+    <color name="electric_blue_dark">#FF0099CC</color>
+    <color name="electric_blue_20">#3300D4FF</color>
+    <color name="electric_blue_30">#4D00D4FF</color>
+    <color name="text_secondary_dark">#FFB0B0C0</color>
+    <color name="text_tertiary_dark">#FF6B7280</color>
+    <color name="divider_dark">#FF1F2937</color>
+    <color name="icon_bg_dark">#0DFFFFFF</color>
+    <color name="dot_inactive">#FF3A3A3A</color>
+    <color name="card_border_dark">#FF234149</color>
+    <color name="warning_yellow">#FFFFC107</color>
+    <color name="warning_yellow_border">#4DFFC107</color>
+    <color name="electric_blue_10">#1A00D4FF</color>
+    <color name="warning_yellow_10">#1AFFC107</color>
+    <color name="slate_400">#FF94A3B8</color>
+    <color name="slate_500">#FF64748B</color>
+    <color name="slate_700_50">#80334155</color>
+    <color name="stock_android_white">#FFE0E0E0</color>
+
+    <!-- Fake update screen -->
+    <color name="pure_black">#FF000000</color>
+    <color name="progress_track">#FF333333</color>
+    <color name="progress_fill">#FFFFFFFF</color>
+    <color name="update_subtext">#FF888888</color>
+    <color name="neutral_surface">#FF1A2C30</color>
+
+    <!-- Reveal screen -->
+    <color name="reveal_pink">#FFFF6B9D</color>
+    <color name="reveal_purple">#FFC44CFF</color>
+    <color name="reveal_blue">#FF4C6FFF</color>
+    <color name="accent_pink">#FFFF0080</color>
+    <color name="accent_purple">#FF7928CA</color>
+
+    <!-- Samsung One UI -->
+    <color name="samsung_ring_track">#FF2A2A2A</color>
+    <color name="samsung_ring_fill">#FF4A90D9</color>
+    <color name="samsung_status_bar">#FF9E9E9E</color>
+
+    <!-- Google Pixel -->
+    <color name="pixel_blue">#FF8AB4F8</color>
+    <color name="pixel_text_secondary">#FF9AA0A6</color>
+    <color name="pixel_text_tertiary">#FF5F6368</color>
+    <color name="pixel_progress_track">#FF303030</color>
+
+    <!-- Xiaomi MIUI -->
+    <color name="xiaomi_dark_bg">#FF0F2023</color>
+    <color name="xiaomi_orange">#FFFF6900</color>
+    <color name="xiaomi_orange_light">#FFFFA040</color>
+
+    <!-- OnePlus OxygenOS -->
+    <color name="oneplus_green">#FF4CAF50</color>
+
+    <!-- Huawei EMUI -->
+    <color name="huawei_light_bg">#FFF5F5F5</color>
+    <color name="huawei_blue">#FF0A84FF</color>
+    <color name="huawei_ring_track">#FFE0E0E0</color>
+    <color name="huawei_text_primary">#FF000000</color>
+    <color name="huawei_text_secondary">#FF999999</color>
+    <color name="huawei_warning_red">#FFFF5252</color>
+
+    <!-- Share template colors -->
+    <color name="share_teal_bg">#FF102222</color>
+    <color name="share_teal_primary">#FF0DF2F2</color>
+    <color name="share_teal_dim">#FF1A3A3A</color>
+    <color name="share_green_bg">#FF102216</color>
+    <color name="share_green_primary">#FF0DF259</color>
+    <color name="share_green_dim">#FF1A2E23</color>
+    <color name="share_crash_bg">#FF0F1F23</color>
+    <color name="share_crash_red">#FFFF2D55</color>
+    <color name="share_navy_bg">#FF101322</color>
+    <color name="share_navy_primary">#FF0D33F2</color>
+    <color name="share_navy_red">#FFFF3333</color>
+    <color name="share_gold_bg">#FF221E10</color>
+    <color name="share_gold_primary">#FFF4C025</color>
+    <color name="share_gold_dark">#FFB8860B</color>
+</resources>

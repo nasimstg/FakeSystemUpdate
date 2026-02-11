@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="update_styles">
+        <item>Samsung (One UI)</item>
+        <item>Google Pixel</item>
+        <item>Xiaomi (MIUI)</item>
+        <item>OnePlus (OxygenOS)</item>
+        <item>Huawei (EMUI)</item>
+        <item>Stock Android</item>
+    </string-array>
+
+    <string-array name="exit_methods">
+        <item>Triple Tap</item>
+        <item>Long Press</item>
+        <item>Volume Up (3x)</item>
+        <item>Shake Device</item>
+    </string-array>
+
+    <string-array name="schedule_modes">
+        <item>Start Now</item>
+        <item>Schedule Date &amp; Time</item>
+        <item>Schedule Interval</item>
+    </string-array>
+
+    <string-array name="share_message_templates">
+        <item>I just wasted %1$s\'s time for %2$s with a fake system update! #SystemStall</item>
+        <item>%1$s stared at a fake update for %2$s. The panic was REAL. #FakeSysUpdate</item>
+        <item>Achievement unlocked: Made %1$s think their phone was bricked for %2$s.</item>
+        <item>Fake update prank success! %1$s fell for it hook, line, and sinker.</item>
+    </string-array>
+</resources>

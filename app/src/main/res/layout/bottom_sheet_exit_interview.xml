@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/charcoal_surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="32dp">
+
+        <!-- Drag handle -->
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_dot_pill_inactive" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.15"
+            android:text="@string/exit_interview_title"
+            android:textColor="@color/electric_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Victim Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_victim_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:boxBackgroundColor="@color/charcoal_dark"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxStrokeColor="@color/electric_blue_30"
+            app:hintTextColor="@color/slate_400">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_victim_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/exit_interview_victim_hint"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Reaction label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/exit_interview_reaction_label"
+            android:textColor="@color/slate_400"
+            android:textSize="13sp" />
+
+        <!-- Reaction ChipGroup -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_reaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_panicked"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chip_panicked"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/charcoal_dark"
+                app:chipStrokeColor="@color/electric_blue_30"
+                app:chipStrokeWidth="1dp"
+                app:checkedIconEnabled="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_stared"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chip_stared"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/charcoal_dark"
+                app:chipStrokeColor="@color/electric_blue_30"
+                app:chipStrokeWidth="1dp"
+                app:checkedIconEnabled="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_called_support"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chip_called_support"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/charcoal_dark"
+                app:chipStrokeColor="@color/electric_blue_30"
+                app:chipStrokeWidth="1dp"
+                app:checkedIconEnabled="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_hit_phone"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chip_hit_phone"
+                android:textColor="@color/white"
+                app:chipBackgroundColor="@color/charcoal_dark"
+                app:chipStrokeColor="@color/electric_blue_30"
+                app:chipStrokeWidth="1dp"
+                app:checkedIconEnabled="false" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Rating label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/exit_interview_rating_label"
+            android:textColor="@color/slate_400"
+            android:textSize="13sp" />
+
+        <!-- Rating slider -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\uD83D\uDC80"
+                android:textSize="16sp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_rating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:stepSize="1"
+                android:valueFrom="1"
+                android:valueTo="5"
+                android:value="3"
+                app:thumbColor="@color/electric_blue"
+                app:trackColorActive="@color/electric_blue"
+                app:trackColorInactive="@color/charcoal_dark" />
+
+            <TextView
+                android:id="@+id/text_rating_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\uD83D\uDC80\uD83D\uDC80\uD83D\uDC80"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!-- Template label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/exit_interview_template_label"
+            android:textColor="@color/slate_400"
+            android:textSize="13sp" />
+
+        <!-- Template thumbnails -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/layout_templates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/preview_0"
+                    android:layout_width="80dp"
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/charcoal_dark"
+                    android:contentDescription="Stats"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/preview_stats_base" />
+
+                <ImageView
+                    android:id="@+id/preview_1"
+                    android:layout_width="80dp"
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/charcoal_dark"
+                    android:contentDescription="Stats Variant"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/preview_stats_variant" />
+
+                <ImageView
+                    android:id="@+id/preview_2"
+                    android:layout_width="80dp"
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/charcoal_dark"
+                    android:contentDescription="Crash"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/preview_crash_base" />
+
+                <ImageView
+                    android:id="@+id/preview_3"
+                    android:layout_width="80dp"
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/charcoal_dark"
+                    android:contentDescription="Crash Variant"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/preview_crash_variant" />
+
+                <ImageView
+                    android:id="@+id/preview_4"
+                    android:layout_width="80dp"
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/charcoal_dark"
+                    android:contentDescription="Trophy"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/preview_trophy_base" />
+
+                <ImageView
+                    android:id="@+id/preview_5"
+                    android:layout_width="80dp"
+                    android:layout_height="140dp"
+                    android:background="@color/charcoal_dark"
+                    android:contentDescription="Trophy Variant"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/preview_trophy_variant" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!-- Message label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/exit_interview_message_label"
+            android:textColor="@color/slate_400"
+            android:textSize="13sp" />
+
+        <!-- Message chips -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <!-- Chips added programmatically -->
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Generate & Share button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_generate_share"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/btn_generate_share"
+            android:textColor="@color/charcoal_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/electric_blue"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/ic_share"
+            app:iconGravity="textStart"
+            app:iconTint="@color/charcoal_dark" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

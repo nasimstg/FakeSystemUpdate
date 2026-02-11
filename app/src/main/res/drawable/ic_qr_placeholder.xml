@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#FF1A2E30"
+        android:pathData="M0,0h200v200h-200z" />
+
+    <!-- Top-left finder pattern -->
+    <path
+        android:fillColor="#FF00D4FF"
+        android:pathData="M20,20h60v60h-60zM30,30h40v40h-40zM40,40h20v20h-20z"
+        android:fillType="evenOdd" />
+
+    <!-- Top-right finder pattern -->
+    <path
+        android:fillColor="#FF00D4FF"
+        android:pathData="M120,20h60v60h-60zM130,30h40v40h-40zM140,40h20v20h-20z"
+        android:fillType="evenOdd" />
+
+    <!-- Bottom-left finder pattern -->
+    <path
+        android:fillColor="#FF00D4FF"
+        android:pathData="M20,120h60v60h-60zM30,130h40v40h-40zM40,140h20v20h-20z"
+        android:fillType="evenOdd" />
+
+    <!-- Data modules (decorative grid) -->
+    <path
+        android:fillColor="#FF00D4FF"
+        android:pathData="M100,90h10v10h-10zM120,90h10v10h-10zM90,100h10v10h-10zM110,100h10v10h-10zM130,100h10v10h-10zM100,110h10v10h-10zM120,110h10v10h-10zM140,110h10v10h-10zM90,120h10v10h-10zM150,120h10v10h-10zM130,130h10v10h-10zM150,130h10v10h-10zM120,140h10v10h-10zM140,140h10v10h-10zM130,150h10v10h-10zM160,150h10v10h-10zM120,160h10v10h-10zM150,160h10v10h-10z" />
+
+    <!-- Timing patterns -->
+    <path
+        android:fillColor="#FF00D4FF"
+        android:pathData="M90,30h10v10h-10zM90,50h10v10h-10zM90,70h10v10h-10zM30,90h10v10h-10zM50,90h10v10h-10zM70,90h10v10h-10z" />
+
+</vector>

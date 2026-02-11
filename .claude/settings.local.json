@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\USER\\\\AndroidStudioProjects\\\\FakeSystemUpdate\\\\stitch\" -Recurse -File)",
+      "Bash(Select-Object FullName, Length)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(find:*)",
+      "Bash(gradlew.bat assembleDebug:*)",
+      "Bash(copy \"appIcon\\\\drawable-mdpi\\\\adaptiveicon.png\" \"app\\\\src\\\\main\\\\res\\\\mipmap-mdpi\\\\ic_launcher.png\")",
+      "Bash(copy \"appIcon\\\\drawable-hdpi\\\\adaptiveicon.png\" \"app\\\\src\\\\main\\\\res\\\\mipmap-hdpi\\\\ic_launcher.png\")",
+      "Bash(copy \"appIcon\\\\drawable-xhdpi\\\\adaptiveicon.png\" \"app\\\\src\\\\main\\\\res\\\\mipmap-xhdpi\\\\ic_launcher.png\")",
+      "Bash(copy \"appIcon\\\\drawable-xxhdpi\\\\adaptiveicon.png\" \"app\\\\src\\\\main\\\\res\\\\mipmap-xxhdpi\\\\ic_launcher.png\")",
+      "Bash(copy \"appIcon\\\\drawable-xxxhdpi\\\\adaptiveicon.png\" \"app\\\\src\\\\main\\\\res\\\\mipmap-xxxhdpi\\\\ic_launcher.png\")",
+      "Bash(findstr:*)",
+      "Bash(copy:*)",
+      "Bash(copy \"c:\\\\Users\\\\USER\\\\AndroidStudioProjects\\\\FakeSystemUpdate\\\\shareableMockDesign\\\\crash_theme_prank_receipt_variant\\\\screen.png\" \"c:\\\\Users\\\\USER\\\\AndroidStudioProjects\\\\FakeSystemUpdate\\\\app\\\\src\\\\main\\\\res\\\\drawable-xxhdpi\\\\preview_crash_variant.png\")",
+      "Bash(cmd /c:*)",
+      "Bash(powershell -Command:*)"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base: dark charcoal -->
+    <item>
+        <shape>
+            <solid android:color="@color/charcoal_dark" />
+        </shape>
+    </item>
+    <!-- Subtle teal radial glow top-left -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#2000D4FF"
+                android:endColor="#00000000"
+                android:type="radial"
+                android:gradientRadius="500dp"
+                android:centerX="0.3"
+                android:centerY="0.15" />
+        </shape>
+    </item>
+    <!-- Very subtle warm accent top-right -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#10FF6B6B"
+                android:endColor="#00000000"
+                android:type="radial"
+                android:gradientRadius="350dp"
+                android:centerX="0.8"
+                android:centerY="0.1" />
+        </shape>
+    </item>
+</layer-list>
