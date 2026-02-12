@@ -2,6 +2,7 @@ package io.softexforge.fakesysupdate
 
 data class PrankSessionData(
     val victimName: String,
+    val pranksterName: String,  // Collected in exit interview
     val reactionType: String,
     val prankRating: Int,
     val templateIndex: Int,
@@ -9,7 +10,8 @@ data class PrankSessionData(
     val durationMs: Long,
     val tapCount: Int,
     val exitMethod: String,
-    val updateStyle: String
+    val updateStyle: String,
+    val customMessage: String? = null
 ) {
     val formattedDuration: String
         get() {
@@ -52,4 +54,29 @@ data class PrankSessionData(
             val cycles = durationMs / 1000.0 * 15.7 / 1000.0
             return String.format("%.1fM", cycles)
         }
+
+    // Observation log text for medical/diagnostic templates
+    val observationLog: String
+        get() = when (reactionType) {
+            "panicked" -> "Subject exhibited elevated cortisol levels. Rapid phone tapping detected. Diagnosis: Critical Gullibility."
+            "stared" -> "Subject remained motionless for $formattedDuration. No vital signs of skepticism detected."
+            "called_support" -> "Subject initiated emergency protocol. Attempted contact with external tech support."
+            "hit_phone" -> "Subject displayed physical aggression toward device. Rage threshold exceeded."
+            else -> "Subject behavior anomalous. Further observation required."
+        }
+
+    // Achievement story text for trophy/gamer templates
+    val achievementStory: String
+        get() {
+            val adjective = when {
+                durationMs > 180000 -> "legendary"  // >3min
+                durationMs > 60000 -> "epic"        // >1min
+                else -> "rare"
+            }
+            return "Executed a $adjective system update prank. Target fell for the fake loading screen and waited $formattedDuration before discovering the truth."
+        }
+
+    // IQ drop percentage (satirical stat)
+    val iqDrop: Int
+        get() = ((durationMs / 1000 / 10) + (prankRating * 5)).coerceIn(5, 99).toInt()
 }

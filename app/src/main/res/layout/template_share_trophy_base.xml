@@ -13,7 +13,7 @@
         android:layout_gravity="center_horizontal"
         android:fontFamily="monospace"
         android:letterSpacing="0.15"
-        android:text="@string/share_systemstall_certified"
+        android:text="@string/share_FAKE_SYS_UPDATE_certified"
         android:textColor="@color/share_teal_primary"
         android:textSize="11sp" />
 

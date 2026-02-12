@@ -129,7 +129,13 @@
     <string name="app_disclaimer">Designed for entertainment purposes only. Not affiliated with any OS provider.</string>
     <string name="label_contact_support">Contact Support</string>
     <string name="label_submit_feedback">Submit Feedback</string>
-    <string name="feedback_url">https://forms.gle/fakesysupdate-feedback</string>
+    <string name="feedback_url">https://fakesysupdate.softexforge.io/feedback</string>
+    <string name="pranks_community_url">https://fakesysupdate.softexforge.io/pranks</string>
+    <string name="btn_view_pranks">View Pranks</string>
+    <string name="btn_share_prank">Share Your Prank</string>
+    <string name="info_icon_desc">Prank information</string>
+    <string name="info_dialog_title">Prank Simulation Active</string>
+    <string name="info_dialog_message">This is not real.\n\nNo data is being modified or deleted.\n\nTo exit: %s</string>
     <string name="label_app_info">App Info</string>
     <string name="app_description">A fun prank app that simulates a fake system update on your device. Perfect for harmless pranks on friends and family!</string>
     <string name="label_version">Version %s</string>
@@ -153,10 +159,10 @@
     <string name="label_agree_terms">I have read and agree to the Terms &amp; Conditions</string>
 
     <!-- Privacy Policy -->
-    <string name="privacy_policy_text"><b>1. Information We Collect</b>\nFake System Update does not collect, store, or transmit any personal information. The app operates entirely offline on your device.\n\n<b>2. Data Storage</b>\nThe app stores only your prank configuration preferences (update style, duration, exit method) locally on your device using Android SharedPreferences. This data never leaves your device.\n\n<b>3. Permissions</b>\nThe app requests the following permissions:\n\u2022 <b>Vibrate</b> \u2013 To provide haptic feedback during the fake update simulation.\n\u2022 <b>Wake Lock</b> \u2013 To keep the screen on during the prank.\n\u2022 <b>Post Notifications</b> \u2013 Required on Android 13+ to trigger scheduled pranks.\n\u2022 <b>Full Screen Intent</b> \u2013 To launch the prank screen from a scheduled trigger.\n\nNo permission is used to access your contacts, photos, camera, microphone, location, or any other personal data.\n\n<b>4. Third-Party Services</b>\nThis app does not integrate any third-party analytics, advertising, or tracking services.\n\n<b>5. Children\'s Privacy</b>\nThis app does not knowingly collect information from children under 13.\n\n<b>6. Changes to This Policy</b>\nWe may update this privacy policy from time to time. Any changes will be reflected in the app update.\n\n<b>7. Contact</b>\nIf you have questions about this privacy policy, please contact us through the app store listing.</string>
+    <string name="privacy_policy_text"><b>1. Information We Collect</b>\nFake System Update does not collect, store, or transmit any personal information. The app operates entirely offline on your device.\n\n<b>2. Data Storage</b>\nThe app stores only your prank configuration preferences (update style, duration, exit method) locally on your device using Android SharedPreferences. This data never leaves your device.\n\n<b>3. Permissions</b>\nThe app requests the following permissions:\n\u2022 <b>Vibrate</b> \u2013 To provide haptic feedback during the fake update simulation.\n\u2022 <b>Wake Lock</b> \u2013 To keep the screen on during the prank.\n\u2022 <b>Post Notifications</b> \u2013 Required on Android 13+ to trigger scheduled pranks.\n\u2022 <b>Full Screen Intent</b> \u2013 To launch the prank screen from a scheduled trigger.\n\nNo permission is used to access your contacts, photos, camera, microphone, location, or any other personal data.\n\n<b>4. External Links</b>\nThe app includes links to our website (fakesysupdate.softexforge.io) where users can optionally share their prank experiences. When you visit this website:\n\u2022 No data is automatically sent from the app\n\u2022 Sharing is entirely user-initiated\n\u2022 The website operates under its own privacy policy\n\u2022 Generated prank receipts DO NOT contain personal information\n\n<b>5. Third-Party Services</b>\nThis app does not integrate any third-party analytics, advertising, or tracking services.\n\n<b>6. Children\'s Privacy</b>\nThis app does not knowingly collect information from children under 13.\n\n<b>7. Changes to This Policy</b>\nWe may update this privacy policy from time to time. Any changes will be reflected in the app update.\n\n<b>8. Contact</b>\nIf you have questions about this privacy policy, please contact us through the app store listing.</string>
 
     <!-- Terms of Service -->
-    <string name="terms_text"><b>1. Introduction</b>\nWelcome to SystemUpdate Prank (\"the App\"). By downloading or using the App, these terms will automatically apply to you \u2013 you should make sure therefore that you read them carefully before using the App.\n\n<b>2. Nature of the Service</b>\nThis application is designed purely for entertainment purposes. It simulates various system update screens with high fidelity. No actual system changes occur. Your data is safe, and no files are permanently erased, modified, or transmitted to external servers.\n\n<b>3. User Conduct &amp; Responsibility</b>\nYou agree to use this App responsibly. You acknowledge that simulating a system failure or update on someone else\'s device without their consent can cause distress. You agree to:\n\u2022 Reveal the prank immediately if the subject becomes visibly distressed.\n\u2022 Not use this App to facilitate any form of harassment or bullying.\n\u2022 Not use this App in professional environments where \"downtime\" could cause financial loss.\n\n<b>4. Limitation of Liability</b>\nTo the maximum extent permitted by applicable law, we shall not be liable for any indirect, incidental, special, consequential or punitive damages resulting from your access to or use of or inability to access or use the App.\n\n<b>5. Updates to Terms</b>\nWe may update our Terms and Conditions from time to time. Thus, you are advised to review this page periodically for any changes.</string>
+    <string name="terms_text"><b>1. Introduction</b>\nWelcome to SystemUpdate Prank (\"the App\"). By downloading or using the App, these terms will automatically apply to you \u2013 you should make sure therefore that you read them carefully before using the App.\n\n<b>2. Nature of the Service</b>\nThis application is designed purely for entertainment purposes. It simulates various system update screens with high fidelity. No actual system changes occur. Your data is safe, and no files are permanently erased, modified, or transmitted to external servers.\n\n<b>3. Safety Features</b>\nThe app includes a non-intrusive info icon that appears after 15 seconds of any simulation. This icon provides clear instructions on how to exit the prank, ensuring users can easily stop the simulation at any time.\n\n<b>4. User Conduct &amp; Responsibility</b>\nYou agree to use this App responsibly. You acknowledge that simulating a system failure or update on someone else\'s device without their consent can cause distress. You agree to:\n\u2022 Reveal the prank immediately if the subject becomes visibly distressed\n\u2022 Not use this App to facilitate any form of harassment or bullying\n\u2022 Not use this App in professional environments where \"downtime\" could cause financial loss\n\u2022 Ensure the target understands this is a harmless prank\n\u2022 Screenshots and prank receipts shared online should respect others\' privacy\n\n<b>5. Limitation of Liability</b>\nTo the maximum extent permitted by applicable law, we shall not be liable for any indirect, incidental, special, consequential or punitive damages resulting from your access to or use of or inability to access or use the App.\n\n<b>6. Updates to Terms</b>\nWe may update our Terms and Conditions from time to time. Thus, you are advised to review this page periodically for any changes.</string>
 
     <!-- Onboarding -->
     <string name="onboarding_welcome_line1">Welcome to</string>
@@ -219,17 +225,36 @@
     <string name="reveal_variant">VARIANT %1$d OF %2$d</string>
 
     <!-- Exit Interview -->
+    <string name="exit_interview_eyebrow">FAKE_SYS_UPDATE // LOG_01</string>
     <string name="exit_interview_title">EXIT INTERVIEW</string>
+    <string name="exit_interview_section_incident">Incident Report</string>
+    <string name="exit_interview_edit_mode">EDIT MODE</string>
+    <string name="exit_interview_target_label">TARGET_ID</string>
+    <string name="exit_interview_operator_label">OPERATOR_ID</string>
     <string name="exit_interview_victim_hint">Who got pranked?</string>
+    <string name="exit_interview_prankster_hint">Your name (operator)</string>
+    <string name="exit_interview_section_reaction">Target Reaction</string>
     <string name="exit_interview_reaction_label">How did they react?</string>
     <string name="chip_panicked">Panicked</string>
     <string name="chip_stared">Stared Silently</string>
-    <string name="chip_called_support">Called Support</string>
-    <string name="chip_hit_phone">Hit the Phone</string>
+    <string name="chip_called_it">Called IT</string>
+    <string name="chip_laughed">Laughed</string>
+    <string name="chip_rebooted">Rebooted</string>
+    <string name="exit_interview_section_impact">System Impact</string>
     <string name="exit_interview_rating_label">Prank Rating</string>
+    <string name="exit_interview_impact_min">MINOR GLITCH</string>
+    <string name="exit_interview_impact_max">TOTAL OUTAGE</string>
+    <string name="exit_interview_section_template">Receipt Template</string>
     <string name="exit_interview_template_label">Choose Template</string>
     <string name="exit_interview_message_label">Share Message</string>
+    <string name="exit_interview_next_step">NEXT STEP</string>
+    <string name="btn_generate_receipt">Generate Receipt</string>
     <string name="btn_generate_share">GENERATE &amp; SHARE</string>
+
+    <!-- Share Message Section -->
+    <string name="exit_interview_section_message">Share Message</string>
+    <string name="chip_custom_message">Custom Message</string>
+    <string name="hint_custom_message">Write your own message...</string>
 
     <!-- Share template strings -->
     <string name="share_diagnostic_header">DIAGNOSTIC DATA OUTPUT //</string>
@@ -265,27 +290,43 @@
     <string name="share_bypass">> Bypassing logic circuits…\n  Success.</string>
     <string name="share_uploading">> Uploading embarrassment…</string>
     <string name="share_error_laugh">> ERROR: Laugh track not found.</string>
-    <string name="share_achievement_unlocked">ACHIEVEMENT UNLOCKED:</string>
     <string name="share_total_confusion">TOTAL CONFUSION</string>
-    <string name="share_systemstall_certified">SYSTEMSTALL CERTIFIED</string>
+    <string name="share_FAKE_SYS_UPDATE_certified">FAKE_SYS_UPDATE CERTIFIED</string>
     <string name="share_prank_level">PRANK LEVEL</string>
     <string name="share_extreme_flex">EXTREME FLEX</string>
     <string name="share_simulated_amount">SIMULATED AMOUNT</string>
     <string name="share_status">STATUS</string>
     <string name="share_verified_glitch">VERIFIED GLITCH</string>
-    <string name="share_systemstall_awards">SYSTEMSTALL AWARDS</string>
+    <string name="share_FAKE_SYS_UPDATE_awards">FAKE_SYS_UPDATE AWARDS</string>
     <string name="share_rare_drop">RARE DROP</string>
     <string name="share_master_of_patience">Master of Patience</string>
     <string name="share_trophy_desc">You stared at a completely frozen screen for %1$s without throwing your phone against the wall.</string>
     <string name="share_rage_level">RAGE LEVEL</string>
     <string name="share_xp_gained">XP GAINED</string>
     <string name="share_share_your_win">Share Your Win</string>
-    <string name="share_branding">SystemStall</string>
+    <string name="share_branding">FAKE_SYS_UPDATE</string>
     <string name="share_data_loss">DATA LOSS CONFIRMED.</string>
     <string name="share_prank_complete">Prank complete.\nGenerate your own chaos.</string>
     <string name="share_generated_by">GENERATED BY</string>
     <string name="share_verification">OFFICIAL GLITCH VERIFICATION</string>
-    <string name="share_copyright">© 2025 SYSTEMSTALL LABS.</string>
+    <string name="share_copyright">© 2025 FAKE_SYS_UPDATE LABS.</string>
+
+    <!-- Gamer Template -->
+    <string name="share_achievement_unlocked">ACHIEVEMENT UNLOCKED</string>
+    <string name="share_master_trickster">MASTER TRICKSTER</string>
+
+    <!-- Kernel Template -->
+    <string name="share_kernel_panic">panic(cpu 0 caller 0xffffff8012ab62f0):</string>
+    <string name="share_gullibility_overflow">GULLIBILITY_OVERFLOW_DETECTED</string>
+
+    <!-- Medical Template -->
+    <string name="share_diagnostic_report">DIAGNOSTIC OBSERVATION REPORT</string>
+    <string name="share_patient_id">PATIENT ID:</string>
+    <string name="share_confusion_level">CONFUSION</string>
+    <string name="share_exposure_time">EXPOSURE TIME</string>
+    <string name="share_observation_log">OBSERVATION LOG:</string>
+    <string name="share_diagnosis">DIAGNOSIS:</string>
+    <string name="share_critical_gullibility">CRITICAL GULLIBILITY ⚠</string>
 
     <!-- Reaction log texts -->
     <string name="reaction_panicked">User initiated call to Tech Support immediately. Pulse elevated.</string>

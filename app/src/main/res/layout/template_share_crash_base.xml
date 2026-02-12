@@ -24,7 +24,7 @@
             android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:fontFamily="monospace"
-            android:text="SYSTEMSTALL // CORE_V3"
+            android:text="FAKE_SYS_UPDATE // CORE_V3"
             android:textColor="#55FFFFFF"
             android:textSize="9sp" />
 
@@ -293,7 +293,7 @@
             android:layout_width="52dp"
             android:layout_height="52dp"
             android:contentDescription="@null"
-            android:src="@drawable/ic_qr_placeholder" />
+            android:src="@drawable/frame_qr_code" />
 
     </LinearLayout>
 

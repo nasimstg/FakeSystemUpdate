@@ -3,6 +3,7 @@ package io.softexforge.fakesysupdate
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageButton
@@ -43,6 +44,12 @@ class RevealActivity : AppCompatActivity(), ExitInterviewBottomSheet.OnInterview
             navigateToSetup()
         }
 
+        // Website promotion button
+        findViewById<MaterialButton>(R.id.btn_view_pranks).setOnClickListener {
+            val url = getString(R.string.pranks_community_url)
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+        }
+
         // Read prank session data
         totalTapCount = intent.getIntExtra(SetupActivity.EXTRA_TAP_COUNT, 0)
         exitMethod = intent.getStringExtra(SetupActivity.EXTRA_EXIT_METHOD) ?: "triple_tap"
@@ -59,12 +66,6 @@ class RevealActivity : AppCompatActivity(), ExitInterviewBottomSheet.OnInterview
             val timeText = getString(R.string.reveal_time_wasted, timeFormatted)
             findViewById<TextView>(R.id.text_time_wasted).text = timeText
         }
-
-        // Variant footer based on selected style
-        val styleKeys = listOf("samsung", "pixel", "xiaomi", "oneplus", "huawei", "stock")
-        val variantNumber = (styleKeys.indexOf(updateStyle) + 1).coerceAtLeast(1)
-        findViewById<TextView>(R.id.text_variant).text =
-            getString(R.string.reveal_variant, variantNumber, styleKeys.size)
 
         // Floating emoji animation
         startFloatingAnimation()

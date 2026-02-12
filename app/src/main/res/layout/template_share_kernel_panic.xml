@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/share_kernel_black"
+    android:orientation="vertical"
+    android:padding="28dp">
+
+    <!-- Panic header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/share_kernel_panic"
+        android:textColor="@color/share_kernel_red"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="@string/share_gullibility_overflow"
+        android:textColor="@color/share_kernel_red"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Victim tag -->
+    <TextView
+        android:id="@+id/text_victim_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="@user panic at victim.c:line 42"
+        android:textColor="@color/white"
+        android:textSize="11sp" />
+
+    <!-- Crash log lines -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="monospace"
+        android:lineSpacingExtra="2dp"
+        android:text="Backtrace:\n0xffffff8012ab62f0\n0xffffff8012ab1a3c\n0xffffff801298f4e8\n0xffffff8012d0c120"
+        android:textColor="#66FF3B30"
+        android:textSize="9sp" />
+
+    <!-- Separator -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginVertical="20dp"
+        android:background="@color/share_kernel_red" />
+
+    <!-- WASTED stamp -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/share_kernel_red"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.2"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        android:text="💀 WASTED 💀"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Time stat -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="FAKE_SYS_UPDATE DURATION"
+            android:textColor="#66FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/text_time_hero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="monospace"
+            android:text="14:23"
+            android:textColor="@color/share_kernel_red"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- IQ drop stat -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#0DFF3B30"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:text="ESTIMATED IQ DROP"
+            android:textColor="#66FFFFFF"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/text_iq_drop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="-42%"
+            android:textColor="@color/share_kernel_red"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- QR code -->
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/frame_qr_code" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- Operator signature -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="operator: "
+                android:textColor="#66FFFFFF"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/text_prankster_signature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="root"
+                android:textColor="@color/share_kernel_red"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

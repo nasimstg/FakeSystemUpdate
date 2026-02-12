@@ -1,6 +1,7 @@
 package io.softexforge.fakesysupdate
 
 import android.app.ActivityManager
+import android.app.AlertDialog
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -77,6 +78,9 @@ class FakeUpdateActivity : AppCompatActivity() {
     // Screen-off receiver to counter power button
     private var screenOffReceiver: BroadcastReceiver? = null
     private var wakeLock: PowerManager.WakeLock? = null
+
+    // Info icon for compliance
+    private var infoIconShown = false
 
     // Periodic immersive mode re-entry
     private val immersiveHandler = Handler(Looper.getMainLooper())
@@ -188,6 +192,44 @@ class FakeUpdateActivity : AppCompatActivity() {
                 sensorManager?.registerListener(shakeListener, it, SensorManager.SENSOR_DELAY_UI)
             }
         }
+
+        // Show info icon after 15 seconds for Google Play compliance
+        showInfoIconDelayed()
+    }
+
+    private fun showInfoIconDelayed() {
+        Handler(Looper.getMainLooper()).postDelayed({
+            if (!isFinishing && !infoIconShown) {
+                infoIconShown = true
+                findViewById<ImageView?>(R.id.iv_info_icon)?.apply {
+                    visibility = View.VISIBLE
+                    animate()
+                        .alpha(0.6f)
+                        .setDuration(300)
+                        .start()
+                    setOnClickListener {
+                        showExitInfoDialog()
+                    }
+                }
+            }
+        }, 15000) // 15 seconds
+    }
+
+    private fun showExitInfoDialog() {
+        val exitInstruction = when (exitMethod) {
+            "triple_tap" -> "Tap the screen 3 times quickly"
+            "shake" -> "Shake your device"
+            "power_button" -> "Press the power button 3 times"
+            "volume_up" -> "Press volume up 3 times"
+            "long_press" -> "Press and hold the screen for 3 seconds"
+            else -> "Use the configured exit method"
+        }
+
+        AlertDialog.Builder(this)
+            .setTitle(R.string.info_dialog_title)
+            .setMessage(getString(R.string.info_dialog_message, exitInstruction))
+            .setPositiveButton(android.R.string.ok) { dialog, _ -> dialog.dismiss() }
+            .show()
     }
 
     private fun startScreenPinning() {

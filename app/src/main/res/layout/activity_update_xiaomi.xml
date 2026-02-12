@@ -280,4 +280,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Info Icon (appears after 15 seconds) -->
+    <ImageView
+        android:id="@+id/iv_info_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="20dp"
+        android:src="@android:drawable/ic_dialog_info"
+        android:contentDescription="@string/info_icon_desc"
+        android:visibility="gone"
+        android:alpha="0"
+        app:tint="#8000D4FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

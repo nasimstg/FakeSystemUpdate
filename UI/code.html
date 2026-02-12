@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prank Exit Interview Screen</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#25c0f4",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101e22",
+                        "surface-dark": "#1A262C",
+                        "surface-darker": "#151F23",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                    boxShadow: {
+                        "glow": "0 0 15px -3px rgba(37, 192, 244, 0.4)",
+                        "glow-sm": "0 0 8px -2px rgba(37, 192, 244, 0.3)",
+                        "glow-lg": "0 0 25px -5px rgba(37, 192, 244, 0.5)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for horizontal scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Range Slider Styling */
+        input[type=range] {
+            -webkit-appearance: none; 
+            background: transparent; 
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #25c0f4;
+            cursor: pointer;
+            margin-top: -10px; 
+            box-shadow: 0 0 15px #25c0f4;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #1A262C;
+            border-radius: 2px;
+        }
+
+        /* Neon Text Effect */
+        .text-neon {
+            text-shadow: 0 0 10px rgba(37, 192, 244, 0.5);
+        }
+        
+        .border-glow {
+            box-shadow: 0 0 10px rgba(37, 192, 244, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 min-h-screen flex justify-center items-center p-0 md:p-4">
+<!-- Mobile Frame Wrapper -->
+<div class="w-full max-w-md bg-background-light dark:bg-background-dark min-h-screen md:min-h-[850px] md:h-[850px] md:rounded-3xl shadow-2xl relative overflow-hidden flex flex-col border-0 md:border md:border-slate-800">
+<!-- Background Grid Pattern -->
+<div class="absolute inset-0 z-0 opacity-5 pointer-events-none" style="background-image: linear-gradient(#25c0f4 1px, transparent 1px), linear-gradient(90deg, #25c0f4 1px, transparent 1px); background-size: 40px 40px;">
+</div>
+<!-- Header -->
+<header class="relative z-10 pt-12 pb-6 px-6 flex justify-between items-center bg-gradient-to-b from-background-dark to-transparent">
+<div>
+<p class="text-xs text-primary/70 tracking-[0.2em] font-bold mb-1">SYSTEM_STALL // LOG_01</p>
+<h1 class="text-2xl font-bold text-white tracking-wider text-neon">EXIT INTERVIEW</h1>
+</div>
+<div class="h-10 w-10 rounded-full border border-primary/30 flex items-center justify-center bg-primary/10">
+<span class="material-icons text-primary text-sm">terminal</span>
+</div>
+</header>
+<!-- Main Scrollable Content -->
+<main class="flex-1 overflow-y-auto px-6 pb-24 relative z-10 hide-scrollbar space-y-8">
+<!-- Section 1: Identity Input -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-xs uppercase text-slate-500 tracking-widest font-semibold flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                        Incident Report
+                    </h2>
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded border border-primary/20">EDIT MODE</span>
+</div>
+<div class="bg-surface-dark border border-slate-800 rounded-xl p-1 shadow-lg relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary/50"></div>
+<div class="p-4 space-y-4">
+<div class="space-y-1">
+<label class="text-[10px] text-primary/80 uppercase tracking-widest ml-1">Target_ID</label>
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-lg">person_off</span>
+<input class="w-full bg-surface-darker text-white border-0 border-b border-slate-700 focus:border-primary focus:ring-0 pl-10 py-3 text-sm placeholder-slate-600 transition-colors rounded-t-md" placeholder="Who got pranked?" type="text"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] text-primary/80 uppercase tracking-widest ml-1">Operator_ID</label>
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-lg">admin_panel_settings</span>
+<input class="w-full bg-surface-darker text-white border-0 border-b border-slate-700 focus:border-primary focus:ring-0 pl-10 py-3 text-sm placeholder-slate-600 transition-colors rounded-t-md" type="text" value="Agent Smith"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Reaction Analysis -->
+<section class="space-y-4">
+<h2 class="text-xs uppercase text-slate-500 tracking-widest font-semibold flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+                    Target Reaction
+                </h2>
+<div class="flex flex-wrap gap-2">
+<button class="bg-primary/20 text-primary border border-primary/50 px-4 py-2 rounded-lg text-sm font-medium shadow-glow-sm transition-all hover:bg-primary/30 flex items-center gap-2">
+<span class="material-icons text-base">warning</span>
+                        Panicked
+                    </button>
+<button class="bg-surface-dark text-slate-400 border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:border-slate-500 transition-all">
+                        Stared Silently
+                    </button>
+<button class="bg-surface-dark text-slate-400 border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:border-slate-500 transition-all">
+                        Called IT
+                    </button>
+<button class="bg-surface-dark text-slate-400 border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:border-slate-500 transition-all">
+                        Laughed
+                    </button>
+<button class="bg-surface-dark text-slate-400 border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium hover:text-white hover:border-slate-500 transition-all">
+                        Rebooted
+                    </button>
+</div>
+</section>
+<!-- Section 3: Impact Rating Slider -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<h2 class="text-xs uppercase text-slate-500 tracking-widest font-semibold flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+                        System Impact
+                    </h2>
+<span class="text-primary font-mono text-xl font-bold text-neon">85%</span>
+</div>
+<div class="px-2 py-4 bg-surface-dark rounded-xl border border-slate-800">
+<input class="w-full h-1 bg-slate-700 rounded-lg appearance-none cursor-pointer" max="100" min="0" type="range" value="85"/>
+<div class="flex justify-between mt-2 text-[10px] text-slate-500 font-mono uppercase">
+<span>Minor Glitch</span>
+<span>Total Outage</span>
+</div>
+</div>
+</section>
+<!-- Section 4: Template Selector -->
+<section class="space-y-4">
+<h2 class="text-xs uppercase text-slate-500 tracking-widest font-semibold flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+                    Receipt Template
+                </h2>
+<div class="overflow-x-auto hide-scrollbar -mx-6 px-6 pb-4">
+<div class="flex gap-4 w-max">
+<!-- Card 1: Selected -->
+<div class="relative group cursor-pointer">
+<div class="w-32 h-44 rounded-xl border-2 border-primary bg-surface-dark relative overflow-hidden shadow-glow transition-all">
+<!-- Preview Content -->
+<div class="absolute inset-0 bg-primary/5 p-3 flex flex-col items-center justify-center space-y-2 opacity-80">
+<div class="w-full h-1 bg-primary/30 mb-2"></div>
+<div class="text-3xl font-bold text-primary">85%</div>
+<div class="text-[8px] text-primary/70 uppercase">Efficiency Loss</div>
+<div class="w-16 h-16 rounded-full border border-dashed border-primary/40 flex items-center justify-center mt-2">
+<span class="material-icons text-primary/60 text-lg">analytics</span>
+</div>
+</div>
+<!-- Badge -->
+<div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary shadow-glow"></div>
+</div>
+<p class="text-center text-xs font-bold text-primary mt-3 uppercase tracking-wider">Stats_Overlay</p>
+</div>
+<!-- Card 2 -->
+<div class="relative group cursor-pointer">
+<div class="w-32 h-44 rounded-xl border border-slate-700 bg-surface-darker relative overflow-hidden hover:border-slate-500 transition-all">
+<div class="absolute inset-0 p-3 flex flex-col items-center justify-center opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all">
+<span class="material-icons text-red-500 text-4xl mb-2">error_outline</span>
+<div class="text-[10px] text-red-400 uppercase font-bold text-center">Fatal Error<br/>0x000004</div>
+<div class="w-full h-px bg-red-500/30 my-2"></div>
+<div class="w-3/4 h-1 bg-slate-600 rounded"></div>
+<div class="w-1/2 h-1 bg-slate-600 rounded mt-1"></div>
+</div>
+</div>
+<p class="text-center text-xs font-medium text-slate-500 group-hover:text-slate-300 mt-3 uppercase tracking-wider">Fatal_Error</p>
+</div>
+<!-- Card 3 -->
+<div class="relative group cursor-pointer">
+<div class="w-32 h-44 rounded-xl border border-slate-700 bg-surface-darker relative overflow-hidden hover:border-slate-500 transition-all">
+<div class="absolute inset-0 p-3 flex flex-col items-center justify-center opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all">
+<span class="material-icons text-yellow-500 text-4xl mb-2">emoji_events</span>
+<div class="text-[10px] text-yellow-400 uppercase font-bold text-center">Achievement<br/>Unlocked</div>
+<div class="w-10 h-10 mt-2 bg-yellow-500/10 rounded-full flex items-center justify-center">
+<span class="material-icons text-yellow-500 text-xs">star</span>
+</div>
+</div>
+</div>
+<p class="text-center text-xs font-medium text-slate-500 group-hover:text-slate-300 mt-3 uppercase tracking-wider">Trophy_Mode</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Action Bar / FAB -->
+<div class="absolute bottom-0 left-0 w-full p-6 z-20 pointer-events-none bg-gradient-to-t from-background-dark via-background-dark/90 to-transparent">
+<div class="flex justify-between items-end pointer-events-auto">
+<!-- Helper Text -->
+<div class="flex flex-col mb-1">
+<span class="text-[10px] uppercase text-slate-500 tracking-widest">Next Step</span>
+<span class="text-sm font-semibold text-slate-300">Generate Receipt</span>
+</div>
+<!-- FAB -->
+<button class="w-16 h-16 bg-primary rounded-2xl shadow-glow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform group relative overflow-hidden">
+<div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-2xl"></div>
+<span class="material-icons text-background-dark text-3xl z-10">ios_share</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

@@ -4,7 +4,7 @@ Here are the expanded details and the UI/UX prompts to bring this beautifully us
 
 ---
 
-## App Concept: "SystemStall" (The Ultimate Update Prank)
+## App Concept: "FAKE_SYS_UPDATE" (The Ultimate Update Prank)
 
 ### Core Mechanics
 

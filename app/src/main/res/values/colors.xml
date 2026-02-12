@@ -83,4 +83,28 @@
     <color name="share_gold_bg">#FF221E10</color>
     <color name="share_gold_primary">#FFF4C025</color>
     <color name="share_gold_dark">#FFB8860B</color>
+
+    <!-- Gamer Achievement Theme -->
+    <color name="share_gamer_bg">#FF1A1028</color>
+    <color name="share_gamer_gold">#FFFFD700</color>
+    <color name="share_gamer_purple">#FF9D4EDD</color>
+    <color name="share_gamer_silver">#FFC0C0C0</color>
+
+    <!-- Kernel Panic Theme -->
+    <color name="share_kernel_black">#FF0A0A0A</color>
+    <color name="share_kernel_red">#FFFF3B30</color>
+
+    <!-- Vital Signs Medical Theme -->
+    <color name="share_medical_bg">#FF0D1F1F</color>
+    <color name="share_medical_cyan">#FF00FFFF</color>
+
+    <!-- Exit Interview Redesign -->
+    <color name="ei_background_dark">#101E22</color>
+    <color name="ei_surface_dark">#1A262C</color>
+    <color name="ei_surface_darker">#151F23</color>
+    <color name="ei_primary">#25C0F4</color>
+    <color name="ei_primary_glow">#4025C0F4</color>
+    <color name="ei_border">#2C3E44</color>
+    <color name="ei_text_secondary">#64748B</color>
+    <color name="ei_text_tertiary">#475569</color>
 </resources>

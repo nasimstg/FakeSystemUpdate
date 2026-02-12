@@ -260,7 +260,7 @@
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:contentDescription="@null"
-                android:src="@drawable/ic_qr_placeholder" />
+                android:src="@drawable/frame_qr_code" />
 
         </LinearLayout>
 

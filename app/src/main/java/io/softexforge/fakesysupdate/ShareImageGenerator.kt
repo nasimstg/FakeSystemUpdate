@@ -23,7 +23,10 @@ class ShareImageGenerator(private val context: Context) {
         R.layout.template_share_crash_base,
         R.layout.template_share_crash_variant,
         R.layout.template_share_trophy_base,
-        R.layout.template_share_trophy_variant
+        R.layout.template_share_trophy_variant,
+        R.layout.template_share_gamer_achievement,
+        R.layout.template_share_kernel_panic,
+        R.layout.template_share_vital_signs
     )
 
     fun generate(data: PrankSessionData): Bitmap {
@@ -54,6 +57,9 @@ class ShareImageGenerator(private val context: Context) {
             3 -> populateCrashVariant(view, data)
             4 -> populateTrophyBase(view, data)
             5 -> populateTrophyVariant(view, data)
+            6 -> populateGamerAchievement(view, data)
+            7 -> populateKernelPanic(view, data)
+            8 -> populateVitalSigns(view, data)
         }
     }
 
@@ -64,6 +70,12 @@ class ShareImageGenerator(private val context: Context) {
         view.findViewById<TextView>(R.id.text_time_value).text = "${minutes}m\n${seconds}s"
         view.findViewById<TextView>(R.id.text_productivity_leak).text = data.productivityLeak
         view.findViewById<TextView>(R.id.text_cpu_cycles).text = data.cpuCyclesBurned
+        
+        // Inject victim name and prankster signature
+        view.findViewById<TextView>(R.id.text_victim_name)?.text =
+            data.victimName.ifEmpty { "Unknown Target" }
+        view.findViewById<TextView>(R.id.text_prankster_signature)?.text =
+            data.pranksterName.ifEmpty { "Anonymous" }
     }
 
     private fun populateStatsVariant(view: View, data: PrankSessionData) {
@@ -83,15 +95,26 @@ class ShareImageGenerator(private val context: Context) {
 
         val reactionText = getReactionLogText(data.reactionType)
         view.findViewById<TextView>(R.id.text_reaction_log).text = reactionText
+        
+        // Inject prankster signature
+        view.findViewById<TextView>(R.id.text_prankster_signature)?.text =
+            data.pranksterName.ifEmpty { "Anonymous" }
     }
 
     private fun populateCrashBase(view: View, data: PrankSessionData) {
         // Static layout — no dynamic fields beyond the grid which is all static strings
+        // Inject prankster signature
+        view.findViewById<TextView>(R.id.text_prankster_signature)?.text =
+            data.pranksterName.ifEmpty { "Anonymous" }
     }
 
     private fun populateCrashVariant(view: View, data: PrankSessionData) {
         val name = data.victimName.ifEmpty { "GullibleFriend" }
         view.findViewById<TextView>(R.id.text_victim_tag).text = "User @$name"
+        
+        // Inject prankster signature
+        view.findViewById<TextView>(R.id.text_prankster_signature)?.text =
+            data.pranksterName.ifEmpty { "Anonymous" }
     }
 
     private fun populateTrophyBase(view: View, data: PrankSessionData) {
@@ -102,6 +125,10 @@ class ShareImageGenerator(private val context: Context) {
         view.findViewById<TextView>(R.id.text_receipt_hash).text =
             "RECEIPT #${(data.durationMs % 99999).toInt().toString().padStart(5, '0')}\n" +
                     "TX_000_CYBER_PUNK_ACHIEVED_CONFUSION"
+                    
+        // Inject prankster signature
+        view.findViewById<TextView>(R.id.text_prankster_signature)?.text =
+            data.pranksterName.ifEmpty { "Anonymous" }
     }
 
     private fun populateTrophyVariant(view: View, data: PrankSessionData) {
@@ -113,6 +140,89 @@ class ShareImageGenerator(private val context: Context) {
 
         val xp = (data.durationMs / 1000 * 10).coerceIn(100, 9999)
         view.findViewById<TextView>(R.id.text_xp_gained).text = "+${xp} XP"
+        
+        // Inject victim name and prankster signature
+        view.findViewById<TextView>(R.id.text_victim_name)?.text =
+            data.victimName.ifEmpty { "Unknown Target" }
+        view.findViewById<TextView>(R.id.text_prankster_signature)?.text =
+            data.pranksterName.ifEmpty { "Anonymous" }
+    }
+
+    private fun populateGamerAchievement(view: View, data: PrankSessionData) {
+        val victimDisplay = data.victimName.ifEmpty { "PlayerName" }
+        view.findViewById<TextView>(R.id.text_victim_name).text = "Target: $victimDisplay"
+
+        view.findViewById<TextView>(R.id.text_achievement_story).text = data.achievementStory
+
+        view.findViewById<TextView>(R.id.text_time_hero).text = data.formattedDuration
+
+        val xp = (data.durationMs / 1000 * 10).coerceIn(100, 9999)
+        view.findViewById<TextView>(R.id.text_xp_gained).text = "+${xp} XP"
+
+        // Reaction badge (dynamic color)
+        val badge = view.findViewById<TextView>(R.id.text_reaction_badge)
+        when (data.reactionType) {
+            "panicked" -> {
+                badge.text = "⚠ CRITICAL FAILURE"
+                badge.setBackgroundResource(R.drawable.bg_badge_red)
+            }
+            "stared" -> {
+                badge.text = "⏸ SYSTEM IDLE"
+                badge.setBackgroundResource(R.drawable.bg_badge_blue)
+            }
+            "called_support" -> {
+                badge.text = "☎ EMERGENCY PROTOCOL"
+                badge.setBackgroundResource(R.drawable.bg_badge_orange)
+            }
+            "hit_phone" -> {
+                badge.text = "💥 RAGE DETECTED"
+                badge.setBackgroundResource(R.drawable.bg_badge_red)
+            }
+            else -> { // Default case for unknown reaction types
+                badge.text = "❓ UNKNOWN REACTION"
+                badge.setBackgroundResource(R.drawable.bg_badge_blue)
+            }
+        }
+
+        view.findViewById<TextView>(R.id.text_prankster_signature).text =
+            data.pranksterName.ifEmpty { "Anonymous" }
+    }
+
+    private fun populateKernelPanic(view: View, data: PrankSessionData) {
+        val victimTag = data.victimName.ifEmpty { "user" }
+        view.findViewById<TextView>(R.id.text_victim_tag).text =
+            "@$victimTag panic at victim.c:line 42"
+
+        view.findViewById<TextView>(R.id.text_time_hero).text = data.formattedDurationClock
+
+        view.findViewById<TextView>(R.id.text_iq_drop).text = "-${data.iqDrop}%"
+
+        view.findViewById<TextView>(R.id.text_prankster_signature).text =
+            data.pranksterName.ifEmpty { "root" }
+    }
+
+    private fun populateVitalSigns(view: View, data: PrankSessionData) {
+        val patientId = data.victimName.ifEmpty { "UNKNOWN" }.uppercase()
+        view.findViewById<TextView>(R.id.text_victim_id).text = "PATIENT ID: $patientId"
+
+        view.findViewById<TextView>(R.id.text_confusion_percent).text = "${data.panicLevel}%"
+
+        val gaugeView = view.findViewById<ImageView>(R.id.image_confusion_gauge)
+        gaugeView.setImageDrawable(
+            PanicGaugeDrawable(
+                level = data.panicLevel,
+                trackColor = Color.parseColor("#0D2E2E"),
+                fillColor = Color.parseColor("#00FFFF"),
+                glowColor = Color.parseColor("#4000FFFF")
+            )
+        )
+
+        view.findViewById<TextView>(R.id.text_time_hero).text = data.formattedDurationClock
+
+        view.findViewById<TextView>(R.id.text_observation_log).text = data.observationLog
+
+        view.findViewById<TextView>(R.id.text_prankster_signature).text =
+            if (data.pranksterName.isEmpty()) "Dr. Anonymous" else "Dr. ${data.pranksterName}"
     }
 
     private fun getReactionLogText(reactionType: String): String {

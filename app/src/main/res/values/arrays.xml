@@ -23,7 +23,7 @@
     </string-array>
 
     <string-array name="share_message_templates">
-        <item>I just wasted %1$s\'s time for %2$s with a fake system update! #SystemStall</item>
+        <item>I just wasted %1$s\'s time for %2$s with a fake system update! #FAKE_SYS_UPDATE</item>
         <item>%1$s stared at a fake update for %2$s. The panic was REAL. #FakeSysUpdate</item>
         <item>Achievement unlocked: Made %1$s think their phone was bricked for %2$s.</item>
         <item>Fake update prank success! %1$s fell for it hook, line, and sinker.</item>
