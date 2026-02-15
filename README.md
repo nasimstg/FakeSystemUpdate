@@ -3,7 +3,7 @@
 > **The ultimate Android prank app that simulates realistic system update screens**
 
 [![Website](https://img.shields.io/badge/Website-fakesysupdate.softexforge.io-blue?style=for-the-badge)](https://fakesysupdate.softexforge.io/)
-[![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android-green?style=for-the-badge&logo=android)](https://www.android.com/)
 
 A high-fidelity prank application that simulates various manufacturer-specific system update screens with pixel-perfect accuracy. Perfect for harmless pranks on friends and family!
